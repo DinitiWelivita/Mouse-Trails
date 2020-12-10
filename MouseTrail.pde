@@ -4,7 +4,7 @@ import java.util.ArrayList;
 ArrayList<Balloon> balloons = new ArrayList<Balloon>();
 
 public void setup() {
-  size(1000,1000);
+  size(600,600);
   
  
 }
@@ -12,11 +12,11 @@ public void setup() {
 public void draw() {
   background(255,255,255);
  
-  for (int i = 0 ; i< 400 ; i++) {
+  for (int i = 0 ; i< 20 ; i++) {
    balloons.add( new Balloon (600,600));
   }
   
-  for (String i : balloons) { 
+  for (Balloon balloon : balloons) { // <=========
   //cars.set
     //balloons[i] = new Balloon (600,600); 
   balloon.draw();

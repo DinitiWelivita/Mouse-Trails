@@ -6,15 +6,16 @@ public class Balloon {
   public boolean alive = true;
   
   public Balloon (int cwidth, int cheight) {
-    this.x = (int) random(mouseX-20, mouseX+20);
-    this.y = (int) random(mouseY-20, mouseY+20);
-    this.vx = (int) random(10,20);
-    this.vy = (int) random(10,20);
-    this.size = (int) random(10,20);
+    this.x = (int) random(cwidth);
+    this.y = (int) random(cheight);
+    this.vx = (int) random(-3,3);
+    this.vy = (int) random(-3,3);
+    this.size = (int) random(0,20);
   }
   
   public void draw() {
-   fill(200,100,50,100);
+    noStroke();
+   fill(200,100,100,75);
    circle(x,y,size);
 }
 
